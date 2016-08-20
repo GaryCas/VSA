@@ -34,7 +34,7 @@ public class ChartAction {
     @GET
     @Path("/testing")
     @Produces(MediaType.APPLICATION_JSON)
-    public Response get(){
+    public Response getAll(){
         chartEntities = chartRepository.findAll();
 
         LOG.log(Level.INFO, "testing ");

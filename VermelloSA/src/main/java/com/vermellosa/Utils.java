@@ -1,6 +1,7 @@
 package com.vermellosa;
 
 import com.googlecode.objectify.ObjectifyService;
+import com.vermellosa.entities.ChartConfig;
 import com.vermellosa.entities.ChartEntity;
 
 /**
@@ -8,7 +9,8 @@ import com.vermellosa.entities.ChartEntity;
  */
 public class Utils {
 
-    public void registerObjectifyModels(){
+    public static void registerObjectifyModels(){
         ObjectifyService.register(ChartEntity.class);
+        ObjectifyService.register(ChartConfig.class);
     }
 }

@@ -3,27 +3,29 @@ package com.vermellosa.api;
 import com.google.appengine.tools.development.testing.LocalDatastoreServiceTestConfig;
 import com.google.appengine.tools.development.testing.LocalMemcacheServiceTestConfig;
 import com.google.appengine.tools.development.testing.LocalServiceTestHelper;
-import com.google.inject.Inject;
+import com.vermellosa.Utils;
 import com.vermellosa.entities.ChartConfig;
 import com.vermellosa.repositories.ChartConfigRepository;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.util.List;
+import javax.ws.rs.core.Response;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 
 /**
  * Created by Gary Cassar on 20/08/2016.
  */
 public class ChartConfigActionIntegrationTest {
 
-
-    @Inject
-    ChartConfigRepository chartConfigRepository;
+    // we need inject working here
+    ChartConfigRepository chartConfigRepository = new ChartConfigRepository();
 
     ChartConfig chartConfig;
+
+    ChartAction chartAction = new ChartAction();
 
     LocalServiceTestHelper helper = new LocalServiceTestHelper(
             new LocalDatastoreServiceTestConfig(),
@@ -33,6 +35,7 @@ public class ChartConfigActionIntegrationTest {
     @Before
     public void setUp(){
         helper.setUp();
+        Utils.registerObjectifyModels();
     }
 
     @After
@@ -49,10 +52,11 @@ public class ChartConfigActionIntegrationTest {
         chartConfigRepository.save(chartConfig);
 
         // when
-        List<ChartConfig> chartConfigList = chartConfigRepository.findAll();
+        Response response = chartAction.getAll();
 
         // then
-        assertEquals("there should be one chart configuration ",1, chartConfigList.size());
-
+        assertNotNull("there should be one chart configuration ", response.getEntity());
+        assertEquals("Should have a status of ", 200, response.getStatus());
+        assertEquals("there should be one card config in the datastore ", 1, chartConfigRepository.findAll().size());
     }
 }
