@@ -256,4 +256,75 @@
             </plugin>
         </plugins>
     </build>
+
+    <profiles>
+    <profile>
+        <id>local</id>
+        <activation>
+            <activeByDefault>true</activeByDefault>
+        </activation>
+        <build>
+            <resources>
+                <resource>
+                    <directory>src/main/resources</directory>
+                    <filtering>true</filtering>
+                </resource>
+                <resource>
+                    <directory>src/main/webapp/WEB-INF</directory>
+                    <filtering>true</filtering>
+                </resource>
+            </resources>
+        </build>
+        <properties>
+            <app.server.url>http://localhost:8080</app.server.url>
+            <appengine.app.id>savvy-aileron-97711</appengine.app.id>
+            <appengine.app.idleinstances>automatic</appengine.app.idleinstances>
+            <test.domains>gmail.com</test.domains>
+            <client.id>1017109922116-0ett9qn9dbc1l4n9shb60sfvo0pdmenl.apps.googleusercontent.com</client.id>
+            <client.secret>kh680i_Tq3JKrczgqqqPCFDu</client.secret>
+            <allowed.origin>*</allowed.origin>
+        </properties>
+    </profile>
+    <profile>
+        <id>dev</id>
+        <properties>
+            <app.server.url>https://savvy-ailron-97711.appspot.com</app.server.url>
+            <appengine.app.id>savvy-aileron-97711</appengine.app.id>
+            <appengine.app.idleinstances>automatic</appengine.app.idleinstances>
+            <test.domains>gmail.com</test.domains>
+            <client.id>1017109922116-0ett9qn9dbc1l4n9shb60sfvo0pdmenl.apps.googleusercontent.com</client.id>
+            <client.secret>kh680i_Tq3JKrczgqqqPCFDu</client.secret>
+            <allowed.origin>*</allowed.origin>
+        </properties>
+    </profile>
+    </profiles>
+
+    <repositories>
+        <repository>
+            <id>VermelloSaRepo</id>
+            <name>VermelloSaRepo-releases</name>
+            <url>https://repo.maven.apache.org/maven2/</url>
+        </repository>
+
+        <repository>
+            <snapshots/>
+            <id>vermelloSaRepo-snapshots</id>
+            <name>vermelloSaRepo-snapshots</name>
+            <url>https://repo.maven.apache.org/maven2/</url>
+        </repository>
+    </repositories>
+
+    <!--<distributionManagement>-->
+        <!--<repository>-->
+            <!--<id>vermelloSaRepo</id>-->
+            <!--<name>vermelloSaRepo-releases</name>-->
+            <!--<url>https://repo.maven.apache.org/maven2/</url>-->
+        <!--</repository>-->
+        <!--<snapshotRepository>-->
+            <!--<id>vermelloSaRepo-snapshots</id>-->
+            <!--<name>vermelloSaRepo-snapshots</name>-->
+            <!--<uniqueVersion>false</uniqueVersion>-->
+            <!--<url>https://repo.maven.apache.org/maven2/</url>-->
+        <!--</snapshotRepository>-->
+    <!--</distributionManagement>-->
 </project>

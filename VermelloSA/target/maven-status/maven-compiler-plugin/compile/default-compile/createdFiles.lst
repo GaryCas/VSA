@@ -1,8 +1,10 @@
 com/vermellosa/papi/BuildModel.class
+com/vermellosa/repositories/BaseRepository.class
 com/vermellosa/parsers/ChartableOutput.class
 com/vermellosa/Utils.class
 com/vermellosa/repositories/ChartRepository.class
-com/vermellosa/api/ChartAction.class
 com/vermellosa/oauth/PredictionOAuthServlet.class
-com/vermellosa/connectors/CloudStorageConnector.class
+com/vermellosa/api/ChartAction.class
 com/vermellosa/entities/ChartEntity.class
+com/vermellosa/connectors/CloudStorageConnector.class
+com/vermellosa/repositories/QueryBuilder.class

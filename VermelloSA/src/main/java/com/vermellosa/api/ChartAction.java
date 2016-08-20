@@ -11,6 +11,8 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 
 /**
@@ -26,11 +28,16 @@ public class ChartAction {
 
     List<ChartEntity> chartEntities;
 
+    private static final Logger LOG = Logger.getLogger(ChartAction.class.getName());
+
+
     @GET
     @Path("/testing")
     @Produces(MediaType.APPLICATION_JSON)
     public Response get(){
         chartEntities = chartRepository.findAll();
+
+        LOG.log(Level.INFO, "testing ");
 
         return Response.status(Response.Status.OK).entity(chartEntities).build();
     }

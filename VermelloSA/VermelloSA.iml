@@ -17,6 +17,7 @@
         </webroots>
         <sourceRoots>
           <root url="file://$MODULE_DIR$/src/main/java" />
+          <root url="file://$MODULE_DIR$/src/main/webapp/WEB-INF" />
         </sourceRoots>
       </configuration>
     </facet>
@@ -30,6 +31,7 @@
       <sourceFolder url="file://$MODULE_DIR$/src/unit_test/resources" type="java-test-resource" />
       <sourceFolder url="file://$MODULE_DIR$/integration_tests/java" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/integration_tests/resources" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/main/webapp/WEB-INF" type="java-resource" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
     </content>
     <orderEntry type="inheritedJdk" />
