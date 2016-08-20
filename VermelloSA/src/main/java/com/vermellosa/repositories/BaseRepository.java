@@ -17,5 +17,9 @@ public abstract class BaseRepository<T> {
         ofy().save().entity(entity).now();
     }
 
+    public void delete(Long id) {
+//        ofy().delete().entity().now();
+    }
+
     public abstract Class<T> getType();
 }
