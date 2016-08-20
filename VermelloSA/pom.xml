@@ -9,7 +9,7 @@
     <artifactId>VermelloSA</artifactId>
 
     <properties>
-        <app.id>VermelloSA</app.id>
+        <app.id>vermellosa</app.id>
         <app.version>1</app.version>
         <appengine.version>1.9.42</appengine.version>
         <appengine.target.version>1.9.42</appengine.target.version>
