@@ -1,0 +1,14 @@
+{
+  "name": "vermellosa",
+  "version": "0.0.1",
+  "authors": [
+    "@garycas"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules"
+  ],
+  "dependencies": {
+    "add-to-homescreen": "~3.1.1"
+  }
+}

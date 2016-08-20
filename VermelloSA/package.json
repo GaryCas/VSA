@@ -1,0 +1,13 @@
+{
+  "name": "VermelloSA",
+  "version": "0.0.1",
+  "description": "Affordable sentiment analysis",
+  "dependencies": {
+    "phantomjs": "^2.1"
+  },
+  "repository": {
+
+  },
+  "author": "Gary Cassar",
+  "license": "UNLICENSED"
+}
