@@ -3,12 +3,16 @@ package com.vermellosa.api;
 import com.google.appengine.tools.development.testing.LocalDatastoreServiceTestConfig;
 import com.google.appengine.tools.development.testing.LocalMemcacheServiceTestConfig;
 import com.google.appengine.tools.development.testing.LocalServiceTestHelper;
+import com.google.inject.Inject;
+import com.vermellosa.GuiceJUnitRunner;
 import com.vermellosa.Utils;
+import com.vermellosa.di.MainChildModule;
 import com.vermellosa.entities.ChartConfig;
 import com.vermellosa.repositories.ChartConfigRepository;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.runner.RunWith;
 
 import javax.ws.rs.core.Response;
 
@@ -18,14 +22,19 @@ import static org.junit.Assert.assertNotNull;
 /**
  * Created by Gary Cassar on 20/08/2016.
  */
+@RunWith(GuiceJUnitRunner.class)
+@GuiceJUnitRunner.GuiceModules({MainChildModule.class})
 public class ChartConfigActionIntegrationTest {
 
     // we need inject working here
-    ChartConfigRepository chartConfigRepository = new ChartConfigRepository();
+    @Inject
+    ChartConfigRepository chartConfigRepository;
 
+    @Inject
     ChartConfig chartConfig;
 
-    ChartAction chartAction = new ChartAction();
+    @Inject
+    ChartAction chartAction;
 
     LocalServiceTestHelper helper = new LocalServiceTestHelper(
             new LocalDatastoreServiceTestConfig(),
