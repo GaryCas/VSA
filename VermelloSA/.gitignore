@@ -1,0 +1,7 @@
+# Backend ignores
+*.iml
+target/
+
+# Front-end ignores
+bower_components/
+node_modules/
