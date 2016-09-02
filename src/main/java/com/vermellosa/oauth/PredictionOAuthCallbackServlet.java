@@ -4,10 +4,12 @@ import com.google.inject.Inject;
 import com.google.inject.Singleton;
 
 /**
- * Created by User on 20/08/2016.
+ * Created by Gary Cassar on 02/09/2016.
  */
+
 @Singleton
-public class PredictionOAuthServlet {
+public class PredictionOAuthCallbackServlet extends OAuthCallbackServlet{
+
     private static final long serialVersionUID = 2518197873017292572L;
 
     @Inject
