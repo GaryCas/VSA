@@ -1,0 +1,13 @@
+# Backend ignores
+VermelloSA/src/unit_test/unit_test.iml
+target/
+.idea
+.sonar
+src/main/webapp/*.html
+
+# Front-end ignores
+../bower_components/
+node_modules/
+public/libs
+public/dist
+*.orig
