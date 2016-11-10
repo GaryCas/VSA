@@ -7,8 +7,6 @@ import com.googlecode.objectify.annotation.Id;
  * Created by User on 20/08/2016.
  */
 @Entity
-public class ChartEntity {
+public class ChartEntity extends BaseEntity{
 
-    @Id
-    Long id;
 }

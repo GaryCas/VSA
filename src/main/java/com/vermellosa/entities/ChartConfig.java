@@ -8,20 +8,9 @@ import com.googlecode.objectify.annotation.Index;
  * Created by Gary Cassar on 20/08/2016.
  */
 @Entity
-public class ChartConfig {
-    @Id
-    private Long id;
-
+public class ChartConfig  extends BaseEntity{
     @Index
     private String name;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
 
     public String getName() {
         return name;
