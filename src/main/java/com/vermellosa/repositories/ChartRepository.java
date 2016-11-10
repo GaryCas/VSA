@@ -7,7 +7,6 @@ import com.vermellosa.entities.ChartEntity;
  */
 public class ChartRepository extends BaseRepository<ChartEntity>{
 
-
     @Override
     public Class<ChartEntity> getType() {
         return ChartEntity.class;

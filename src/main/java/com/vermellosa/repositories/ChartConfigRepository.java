@@ -8,8 +8,6 @@ import com.vermellosa.entities.ChartConfig;
  */
 public class ChartConfigRepository extends BaseRepository<ChartConfig> {
 
-
-
     private static final Logger LOG = Logger.getLogger(ChartConfigRepository.class);
 
 
