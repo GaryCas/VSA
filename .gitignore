@@ -4,6 +4,8 @@ target/
 .sonar
 src/main/webapp/*.html
 *.iml
+VSA/VermelloSA.iml
+VermelloSA.iml
 
 # Front-end ignores
 bower_components/

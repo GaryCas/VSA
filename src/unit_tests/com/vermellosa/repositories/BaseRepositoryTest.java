@@ -9,16 +9,13 @@ import com.google.appengine.tools.development.testing.LocalServiceTestHelper;
 import com.vermellosa.entities.BaseEntity;
 import com.vermellosa.entities.ChartConfig;
 import com.vermellosa.entities.ChartEntity;
-import com.vermellosa.parameterised_tests.EntityProvider;
 import com.vermellosa.testUtils;
 import junitparams.JUnitParamsRunner;
 import junitparams.Parameters;
 import org.junit.After;
-import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.junit.runners.Parameterized;
 
 import static org.junit.Assert.*;
 
@@ -51,7 +48,7 @@ public class BaseRepositoryTest {
 
     // tests that entities are assigned Ids automatically when they are saved to the datastore.
     @Test
-    @Parameters(source= EntityProvider.class)
+    @Parameters(source= com.vermellosa.parameterised_tests.EntityProvider.class)
     public void testSaveEntity(BaseEntity entity){
         // given
 
