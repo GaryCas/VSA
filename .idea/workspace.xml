@@ -2,43 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="adc175f5-8eb0-418d-b486-8be0f6c5f9d9" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/unit_test/unit_test.iml" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/vermellosa/GuiceJUnitRunner.java" afterPath="$PROJECT_DIR$/src/main/com/vermellosa/GuiceJUnitRunner.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/vermellosa/api/ChartAction.java" afterPath="$PROJECT_DIR$/src/main/com/vermellosa/api/ChartAction.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/vermellosa/api/ChartConfigAction.java" afterPath="$PROJECT_DIR$/src/main/com/vermellosa/api/ChartConfigAction.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/vermellosa/api/HomepageAction.java" afterPath="$PROJECT_DIR$/src/main/com/vermellosa/api/HomepageAction.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/vermellosa/api/ModelAction.java" afterPath="$PROJECT_DIR$/src/main/com/vermellosa/api/ModelAction.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/vermellosa/api/SyncAction.java" afterPath="$PROJECT_DIR$/src/main/com/vermellosa/api/SyncAction.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/vermellosa/connectors/CloudStorageConnector.java" afterPath="$PROJECT_DIR$/src/main/com/vermellosa/connectors/CloudStorageConnector.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/vermellosa/di/MainChildModule.java" afterPath="$PROJECT_DIR$/src/main/com/vermellosa/di/MainChildModule.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/vermellosa/entities/BaseEntity.java" afterPath="$PROJECT_DIR$/src/main/com/vermellosa/entities/BaseEntity.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/vermellosa/entities/ChartConfig.java" afterPath="$PROJECT_DIR$/src/main/com/vermellosa/entities/ChartConfig.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/vermellosa/entities/ChartEntity.java" afterPath="$PROJECT_DIR$/src/main/com/vermellosa/entities/ChartEntity.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/vermellosa/entities/ModelVersion.java" afterPath="$PROJECT_DIR$/src/main/com/vermellosa/entities/ModelVersion.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/vermellosa/listeners/GuiceContextListener.java" afterPath="$PROJECT_DIR$/src/main/com/vermellosa/listeners/GuiceContextListener.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/vermellosa/oauth/OAuthCallbackServlet.java" afterPath="$PROJECT_DIR$/src/main/com/vermellosa/oauth/OAuthCallbackServlet.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/vermellosa/oauth/OAuthServlet.java" afterPath="$PROJECT_DIR$/src/main/com/vermellosa/oauth/OAuthServlet.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/vermellosa/oauth/OAuthUtils.java" afterPath="$PROJECT_DIR$/src/main/com/vermellosa/oauth/OAuthUtils.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/vermellosa/oauth/PredictOAuthUtils.java" afterPath="$PROJECT_DIR$/src/main/com/vermellosa/oauth/PredictOAuthUtils.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/vermellosa/oauth/PredictionOAuthCallbackServlet.java" afterPath="$PROJECT_DIR$/src/main/com/vermellosa/oauth/PredictionOAuthCallbackServlet.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/vermellosa/oauth/PredictionOAuthServlet.java" afterPath="$PROJECT_DIR$/src/main/com/vermellosa/oauth/PredictionOAuthServlet.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/vermellosa/papi/BuildModel.java" afterPath="$PROJECT_DIR$/src/main/com/vermellosa/papi/BuildModel.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/vermellosa/parsers/ChartableOutput.java" afterPath="$PROJECT_DIR$/src/main/com/vermellosa/parsers/ChartableOutput.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/vermellosa/repositories/BaseRepository.java" afterPath="$PROJECT_DIR$/src/main/com/vermellosa/repositories/BaseRepository.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/vermellosa/repositories/ChartConfigRepository.java" afterPath="$PROJECT_DIR$/src/main/com/vermellosa/repositories/ChartConfigRepository.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/vermellosa/repositories/ChartRepository.java" afterPath="$PROJECT_DIR$/src/main/com/vermellosa/repositories/ChartRepository.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/vermellosa/repositories/ModelVersionRepository.java" afterPath="$PROJECT_DIR$/src/main/com/vermellosa/repositories/ModelVersionRepository.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/vermellosa/utils/Config.java" afterPath="$PROJECT_DIR$/src/main/com/vermellosa/utils/Config.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/vermellosa/utils/GoogleServiceWrapper.java" afterPath="$PROJECT_DIR$/src/main/com/vermellosa/utils/GoogleServiceWrapper.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/vermellosa/utils/OfyRegi.java" afterPath="$PROJECT_DIR$/src/main/com/vermellosa/utils/OfyRegi.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/vermellosa/utils/VersionComparatorUtil.java" afterPath="$PROJECT_DIR$/src/main/com/vermellosa/utils/VersionComparatorUtil.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/unit_tests/java/com/vermellosa/api/ChartConfigActionTest.java" afterPath="$PROJECT_DIR$/src/unit_tests/com/vermellosa/api/ChartConfigActionTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/unit_tests/java/com/vermellosa/parameterised_tests/EntityProvider.java" afterPath="$PROJECT_DIR$/src/unit_tests/com/vermellosa/parameterised_tests/EntityProvider.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/unit_tests/java/com/vermellosa/repositories/BaseRepositoryTest.java" afterPath="$PROJECT_DIR$/src/unit_tests/com/vermellosa/repositories/BaseRepositoryTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/unit_tests/java/com/vermellosa/testUtils.java" afterPath="$PROJECT_DIR$/src/unit_tests/com/vermellosa/testUtils.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/VermelloSA.iml" afterPath="$PROJECT_DIR$/VermelloSA.iml" />
     </list>
     <ignored path="VSA.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -90,8 +55,8 @@
           <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/.gitignore">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="102">
-                  <caret line="6" column="14" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
+                <state relative-caret-position="153">
+                  <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
                   <folding />
                 </state>
               </provider>
@@ -391,7 +356,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="target" />
+              <option name="myItemId" value=".idea" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -967,7 +932,7 @@
       <workItem from="1478794715173" duration="5578000" />
       <workItem from="1478818775121" duration="22000" />
       <workItem from="1478818817447" duration="595000" />
-      <workItem from="1478819444941" duration="374000" />
+      <workItem from="1478819444941" duration="556000" />
     </task>
     <servers />
   </component>
@@ -1004,11 +969,11 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6569000" />
+    <option name="totallyTimeSpent" value="6751000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1024,7 +989,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32875264" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1659,8 +1624,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="14" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
+        <state relative-caret-position="153">
+          <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
           <folding />
         </state>
       </provider>
