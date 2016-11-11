@@ -11,6 +11,14 @@ public class BaseEntity {
     @Id
     private Long id;
 
+    public BaseEntity(){
+
+    }
+
+    public BaseEntity(String id){
+        this.id = Long.parseLong(id);
+    }
+
     public Long getId() {
         return id;
     }
@@ -18,4 +26,6 @@ public class BaseEntity {
     public void setId(Long id) {
         this.id = id;
     }
+
+
 }

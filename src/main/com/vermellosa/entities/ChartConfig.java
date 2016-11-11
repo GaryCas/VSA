@@ -12,6 +12,14 @@ public class ChartConfig  extends BaseEntity{
     @Index
     private String name;
 
+    public ChartConfig(){
+        super();
+    }
+
+    public ChartConfig(String id){
+        super(id);
+    }
+
     public String getName() {
         return name;
     }

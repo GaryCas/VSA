@@ -5,8 +5,10 @@ import com.googlecode.objectify.cmd.LoadType;
 import com.googlecode.objectify.cmd.Query;
 import com.googlecode.objectify.cmd.QueryKeys;
 import com.sun.istack.logging.Logger;
+import com.vermellosa.entities.BaseEntity;
 import com.vermellosa.entities.ChartConfig;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.logging.Level;
@@ -24,24 +26,18 @@ public abstract class BaseRepository<T> {
         return ofy().load().type(getType());
     }
     
-    public T findById(String id) {
-        try {
-            return getBaseLoadQuery().id(Long.parseLong(id)).now();
-        } catch(NumberFormatException e) {
-            LOG.log(Level.WARNING, "Error parsing if to long. Returning fake", e);
-            ChartConfig chartConfig = new ChartConfig();
-            chartConfig.setId(-1L);
-            return (T) chartConfig;
-        }
+    public T findById(Long id) {
+        return getBaseLoadQuery().id(id).now();
     }
 
     public Key<T> save(T entity){
         return ofy().save().entity(entity).now();
     }
 
-    public Map<Key<T>, T> save(List<T> entityList){
-        return ofy().save().entities(entityList).now();
+    public void save(ArrayList<T> entityList){
+        ofy().save().entities(entityList).now();
     }
+
 
     public void delete(T entity) {
         ofy().delete().entity(entity).now();
@@ -60,7 +56,8 @@ public abstract class BaseRepository<T> {
     }
 
     public void delete(Long id) {
-//        ofy().delete().entity().now();
+             BaseEntity entity = (BaseEntity) findById(id);
+             ofy().delete().entity(entity).now();
     }
 
     public abstract Class<T> getType();
