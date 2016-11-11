@@ -1,5 +1,6 @@
 package com.vermellosa.entities;
 
+import com.google.inject.Inject;
 import com.googlecode.objectify.annotation.Entity;
 import com.googlecode.objectify.annotation.Id;
 
@@ -10,14 +11,16 @@ import java.util.Hashtable;
  */
 @Entity
 public class ChartEntity extends BaseEntity{
-    private Hashtable<String, Integer> data = new Hashtable<>();
+    private Hashtable<String, Integer> data;
 
     public ChartEntity(){
         super();
+        this.data = new Hashtable<>();
     }
 
     public ChartEntity(Long id){
         super(id);
+        this.data = new Hashtable<>();
     }
 
     public ChartEntity(Hashtable data){
@@ -26,17 +29,41 @@ public class ChartEntity extends BaseEntity{
     }
 
     public void incLabelValue(String label){
-        int value = data.get(label).intValue();
-        data.put(label, value++);
+        data.put(label, getDataValue(label) + 1);
     }
 
-    public void incLabelValueBy(String label, int incValue){
-        int value = data.get(label).intValue();
-        data.put(label, value + incValue);
+    public void incLabelValueBy(String label, int incValue) throws Exception {
+        // data validation. A user should not be able to decrement a value.
+        if(incValue > 0) {
+            data.put(label, getDataValue(label) + incValue);
+        } else {
+            throw new Exception("Increment value can not be negative");
+        }
     }
 
-    public void setLabelValue(String label, int incValue){
-        data.put(label, incValue);
+    public void setLabelValue(String label, int value){
+        data.put(label, value);
     }
 
+    // data validation. If the the hashmap is accessed directly and the get(label) returns a null,
+    // accessing the intValue() method will return a null pointer exception.
+    // Accessing data through this method will ensure safety principals and eliminate a possible null pointer exception
+    int getDataValue(String label){
+        Integer value = getData().get(label);
+        if(value == null){
+            Hashtable<String, Integer> temp = getData();
+            temp.put(label, 0);
+            setData(temp);
+        }
+
+        return getData().get(label);
+    }
+
+    public Hashtable<String, Integer> getData() {
+        return data;
+    }
+
+    public void setData(Hashtable<String, Integer> data) {
+        this.data = data;
+    }
 }

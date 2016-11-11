@@ -11,7 +11,7 @@ import com.vermellosa.entities.ChartConfig;
 import com.vermellosa.entities.ChartEntity;
 import com.vermellosa.entities.ModelVersion;
 import com.vermellosa.parameterised_tests.EntityProvider;
-import com.vermellosa.testUtils;
+import com.vermellosa.utils.ofyReg;
 import junitparams.JUnitParamsRunner;
 import junitparams.Parameters;
 import org.junit.After;
@@ -36,7 +36,7 @@ public class BaseRepositoryTest {
 
     @Before
     public void setUp(){
-        testUtils.registerObjectifyModels();
+        ofyReg.registerObjectifyModels();
         helper.setUp();
     }
 
