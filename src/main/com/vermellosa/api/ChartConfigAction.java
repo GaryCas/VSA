@@ -2,6 +2,7 @@ package com.vermellosa.api;
 
 import com.google.inject.Inject;
 import com.google.inject.Singleton;
+import com.vermellosa.entities.BaseEntity;
 import com.vermellosa.repositories.ChartConfigRepository;
 
 import javax.ws.rs.DELETE;
@@ -19,16 +20,17 @@ public class ChartConfigAction {
     @Inject
     ChartConfigRepository chartConfigRepository;
 
-
     @GET
-    @Path("/save/{configName}")
-    public void save(){
+    @Path("/save/{ent}")
+    public void save(@PathParam("ent") String ent){
 
     }
 
     @GET
-    @Path("/retrieve/{configName}")
-    public void retrieveConfig() {
+    @Path("/retrieve/{id}")
+    public void retrieveConfig(@PathParam("id") String id) {
+        long longid = Long.parseLong(id);
+        chartConfigRepository.findById(longid);
 
     }
 
