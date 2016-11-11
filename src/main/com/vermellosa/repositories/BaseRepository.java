@@ -62,29 +62,29 @@ public abstract class BaseRepository<T> {
 
     public abstract Class<T> getType();
 
-    protected class QueryBuilder{
-        private Query<T> target;
-        boolean targetInitialised = false;
-
-        public QueryBuilder(){
-            initTarget();
-        }
-
-        private void initTarget() {
-            target = getBaseLoadQuery();
-            targetInitialised = true;
-        }
-
-        public QueryBuilder withFilter(String filter, Object value){
-            if(value != null && targetInitialised){
-                target.filter(filter, value);
-            }
-            return this;
-        }
-
-        public Query<T> build(){
-            return target;
-        }
-
-    }
+//    protected class QueryBuilder{
+//        private Query<T> target;
+//        boolean targetInitialised = false;
+//
+//        public QueryBuilder(){
+//            initTarget();
+//        }
+//
+//        private void initTarget() {
+//            target = getBaseLoadQuery();
+//            targetInitialised = true;
+//        }
+//
+//        public QueryBuilder withFilter(String filter, Object value){
+//            if(value != null && targetInitialised){
+//                target.filter(filter, value);
+//            }
+//            return this;
+//        }
+//
+//        public Query<T> build(){
+//            return target;
+//        }
+//
+//    }
 }

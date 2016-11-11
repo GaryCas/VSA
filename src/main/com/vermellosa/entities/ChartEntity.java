@@ -32,17 +32,22 @@ public class ChartEntity extends BaseEntity{
         data.put(label, getDataValue(label) + 1);
     }
 
+    // Most likely to be used most frequently.
     public void incLabelValueBy(String label, int incValue) throws Exception {
         // data validation. A user should not be able to decrement a value.
         if(incValue > 0) {
             data.put(label, getDataValue(label) + incValue);
         } else {
-            throw new Exception("Increment value can not be negative");
+            throw new IllegalArgumentException("Increment value can not be negative");
         }
     }
 
     public void setLabelValue(String label, int value){
-        data.put(label, value);
+        if(value > 0) {
+            data.put(label, value);
+        } else {
+            throw new IllegalArgumentException("Increment value can not be negative");
+        }
     }
 
     // data validation. If the the hashmap is accessed directly and the get(label) returns a null,

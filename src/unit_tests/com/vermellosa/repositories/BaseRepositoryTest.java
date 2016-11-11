@@ -160,9 +160,9 @@ public class BaseRepositoryTest {
         assertNull(chartConfigRepository.findById(4L));
     }
 
-    @Test
-    @Parameters(source=EntityProvider.class, method="provideVariedEntities")
-    public void testFilterByType(){
-
-    }
+//    @Test
+//    @Parameters(source=EntityProvider.class, method="provideVariedEntities")
+//    public void testFilterByType(){
+//
+//    }
 }

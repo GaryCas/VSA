@@ -47,6 +47,46 @@ public class ChartEntityTest {
         System.out.print(chartEntity.getData());
     }
 
+    @Test(expected = IllegalArgumentException.class)
+    @Parameters(source=EntityProvider.class, method="provideChartEntities")
+    public void testIncByNegative(ChartEntity chartEntity) throws Exception {
+        // given
+        int testVal = -5;
+
+        // when
+        int value = chartEntity.getDataValue("Happy");
+        chartEntity.incLabelValueBy("Happy", testVal);
+
+        // then
+        // expectException
+    }
+
+    @Test (expected = IllegalArgumentException.class)
+    @Parameters(source=EntityProvider.class, method="provideChartEntities")
+    public void testSetLabelNegVal(ChartEntity chartEntity) throws Exception {
+        // given
+        int testVal = -5;
+
+        // when
+        chartEntity.setLabelValue("Potato", testVal);
+
+        // then
+    }
+
+    @Test
+    @Parameters(source=EntityProvider.class, method="provideChartEntities")
+    public void testSetLabelVal(ChartEntity chartEntity) throws Exception {
+        // given
+        int testVal = 5;
+
+        // when
+        chartEntity.setLabelValue("Potato", testVal);
+
+        // then
+        assertEquals("Potato value has not been set." , testVal, chartEntity.getDataValue("Potato"));
+        System.out.print(chartEntity.getData());
+    }
+
     @Test
     public void testGetDataValuesForNullValue(){
         // given
@@ -56,6 +96,5 @@ public class ChartEntityTest {
 
         // Then
         assertEquals("value not intialised to 0", value, 0);
-        // test when a key is not null
     }
 }
