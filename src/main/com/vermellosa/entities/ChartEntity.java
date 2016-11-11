@@ -4,6 +4,7 @@ import com.google.inject.Inject;
 import com.googlecode.objectify.annotation.Entity;
 import com.googlecode.objectify.annotation.Id;
 
+import java.util.Date;
 import java.util.Hashtable;
 
 /**
@@ -12,19 +13,21 @@ import java.util.Hashtable;
 @Entity
 public class ChartEntity extends BaseEntity{
     private Hashtable<String, Integer> data;
+    private Date date;
 
     public ChartEntity(){
         super();
         this.data = new Hashtable<>();
+        date = new Date();
     }
 
     public ChartEntity(Long id){
-        super(id);
-        this.data = new Hashtable<>();
+        new ChartEntity();
+        setId(id);
     }
 
     public ChartEntity(Hashtable data){
-        super();
+        new ChartEntity();
         this.data = data;
     }
 
@@ -70,5 +73,13 @@ public class ChartEntity extends BaseEntity{
 
     public void setData(Hashtable<String, Integer> data) {
         this.data = data;
+    }
+
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
     }
 }

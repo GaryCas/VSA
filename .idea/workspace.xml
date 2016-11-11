@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="adc175f5-8eb0-418d-b486-8be0f6c5f9d9" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/com/vermellosa/entities/BaseEntity.java" afterPath="$PROJECT_DIR$/src/main/com/vermellosa/entities/BaseEntity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/com/vermellosa/entities/ChartEntity.java" afterPath="$PROJECT_DIR$/src/main/com/vermellosa/entities/ChartEntity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/com/vermellosa/repositories/BaseRepository.java" afterPath="$PROJECT_DIR$/src/main/com/vermellosa/repositories/BaseRepository.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/com/vermellosa/repositories/ChartRepository.java" afterPath="$PROJECT_DIR$/src/main/com/vermellosa/repositories/ChartRepository.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/unit_tests/com/vermellosa/entities/ChartEntityTest.java" afterPath="$PROJECT_DIR$/src/unit_tests/com/vermellosa/entities/ChartEntityTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/unit_tests/com/vermellosa/parameterised_tests/EntityProvider.java" afterPath="$PROJECT_DIR$/src/unit_tests/com/vermellosa/parameterised_tests/EntityProvider.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/unit_tests/com/vermellosa/repositories/BaseRepositoryTest.java" afterPath="$PROJECT_DIR$/src/unit_tests/com/vermellosa/repositories/BaseRepositoryTest.java" />
     </list>
     <ignored path="VSA.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,7 +26,7 @@
     <SUITE FILE_PATH="coverage/VSA$BaseRepositoryTest_testDelete.coverage" NAME="BaseRepositoryTest.testDelete Coverage Results" MODIFIED="1478832866871" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.vermellosa.repositories.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/VSA$All_in_VermelloSA.coverage" NAME="All in VermelloSA Coverage Results" MODIFIED="1478832786781" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/VSA$All_in_VermelloSA.coverage" NAME="All in VermelloSA Coverage Results" MODIFIED="1478833256572" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/VSA$BaseRepositoryTest_testFindAllKeys.coverage" NAME="BaseRepositoryTest.testFindAllKeys Coverage Results" MODIFIED="1478832862601" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.vermellosa.repositories.*</FILTER>
     </SUITE>
@@ -110,26 +108,30 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="ChartEntity.java" pinned="false" current-in-tab="false">
+          <file leaf-file-name="ChartEntity.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main/com/vermellosa/entities/ChartEntity.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="469">
-                  <caret line="41" column="9" selection-start-line="41" selection-start-column="9" selection-end-line="41" selection-end-column="9" />
+                <state relative-caret-position="-143">
+                  <caret line="44" column="9" selection-start-line="44" selection-start-column="9" selection-end-line="44" selection-end-column="9" />
                   <folding>
                     <element signature="method#ChartEntity#0;class#ChartEntity#0" expanded="false" />
                     <element signature="method#ChartEntity#1;class#ChartEntity#0" expanded="false" />
-                    <element signature="e#656#657#0" expanded="true" />
-                    <element signature="e#712#713#0" expanded="true" />
-                    <element signature="e#1987#1988#0" expanded="true" />
-                    <element signature="e#2014#2015#0" expanded="true" />
-                    <element signature="e#2074#2075#0" expanded="true" />
-                    <element signature="e#2106#2107#0" expanded="true" />
+                    <element signature="e#727#728#0" expanded="true" />
+                    <element signature="e#783#784#0" expanded="true" />
+                    <element signature="e#2058#2059#0" expanded="true" />
+                    <element signature="e#2085#2086#0" expanded="true" />
+                    <element signature="e#2145#2146#0" expanded="true" />
+                    <element signature="e#2177#2178#0" expanded="true" />
+                    <element signature="e#2206#2207#0" expanded="true" />
+                    <element signature="e#2233#2234#0" expanded="true" />
+                    <element signature="e#2271#2272#0" expanded="true" />
+                    <element signature="e#2303#2304#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="EntityProvider.java" pinned="false" current-in-tab="true">
+          <file leaf-file-name="EntityProvider.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/unit_tests/com/vermellosa/parameterised_tests/EntityProvider.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="654">
@@ -154,7 +156,7 @@
           <file leaf-file-name="BaseRepository.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/com/vermellosa/repositories/BaseRepository.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1099">
+                <state relative-caret-position="946">
                   <caret line="88" column="7" selection-start-line="88" selection-start-column="7" selection-end-line="88" selection-end-column="7" />
                   <folding>
                     <element signature="imports" expanded="true" />
@@ -207,7 +209,7 @@
             <entry file="file://$PROJECT_DIR$/src/main/com/vermellosa/entities/BaseEntity.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="408">
-                  <caret line="28" column="4" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="4" />
+                  <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
                   <folding>
                     <element signature="imports" expanded="true" />
                     <element signature="e#306#307#0" expanded="true" />
@@ -217,14 +219,54 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="ChartEntityTest.java" pinned="false" current-in-tab="true">
+          <file leaf-file-name="ChartEntity.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/com/vermellosa/entities/ChartEntity.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="1020">
+                  <caret line="77" column="25" selection-start-line="77" selection-start-column="25" selection-end-line="77" selection-end-column="25" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="ChartEntityTest.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/unit_tests/com/vermellosa/entities/ChartEntityTest.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1190">
-                  <caret line="70" column="51" selection-start-line="70" selection-start-column="51" selection-end-line="70" selection-end-column="51" />
+                <state relative-caret-position="183">
+                  <caret line="96" column="48" selection-start-line="96" selection-start-column="48" selection-end-line="96" selection-end-column="48" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="ChartRepository.java" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/main/com/vermellosa/repositories/ChartRepository.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="221">
+                  <caret line="15" column="11" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Calendar.java" pinned="false" current-in-tab="false">
+            <entry file="jar://C:/Program Files (x86)/Java/jdk1.7.0_55/src.zip!/java/util/Calendar.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="2924">
+                  <caret line="309" column="22" selection-start-line="309" selection-start-column="22" selection-end-line="309" selection-end-column="22" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="BuildModel.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/com/vermellosa/papi/BuildModel.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="119">
+                  <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -275,12 +317,13 @@
         <option value="$PROJECT_DIR$/src/unit_tests/com/vermellosa/ofyReg.java" />
         <option value="$PROJECT_DIR$/src/unit_tests/com/vermellosa/utils/ofyReg.java" />
         <option value="$PROJECT_DIR$/src/unit_tests/com/vermellosa/utils/ChartMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/com/vermellosa/entities/ChartEntity.java" />
-        <option value="$PROJECT_DIR$/src/unit_tests/com/vermellosa/entities/ChartEntityTest.java" />
         <option value="$PROJECT_DIR$/src/main/com/vermellosa/repositories/BaseRepository.java" />
         <option value="$PROJECT_DIR$/src/unit_tests/com/vermellosa/parameterised_tests/EntityProvider.java" />
         <option value="$PROJECT_DIR$/src/unit_tests/com/vermellosa/repositories/BaseRepositoryTest.java" />
         <option value="$PROJECT_DIR$/src/main/com/vermellosa/entities/BaseEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/com/vermellosa/entities/ChartEntity.java" />
+        <option value="$PROJECT_DIR$/src/unit_tests/com/vermellosa/entities/ChartEntityTest.java" />
+        <option value="$PROJECT_DIR$/src/main/com/vermellosa/repositories/ChartRepository.java" />
       </list>
     </option>
   </component>
@@ -578,6 +621,32 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="papi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VSA" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VSA" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vermellosa" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="entities" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -634,7 +703,7 @@
       <recent name="C:\Users\rd019985\OneDrive\VSA\src" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.All in VermelloSA">
+  <component name="RunManager" selected="JUnit.ChartEntityTest.testDate">
     <configuration default="false" name="BaseRepositoryTest.testSaveAndDeleteList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -648,32 +717,6 @@
       <option name="PACKAGE_NAME" value="com.vermellosa.repositories" />
       <option name="MAIN_CLASS_NAME" value="com.vermellosa.repositories.BaseRepositoryTest" />
       <option name="METHOD_NAME" value="testSaveAndDeleteList" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="BaseRepositoryTest.testFindAllKeys" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.vermellosa.repositories.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="VermelloSA" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.vermellosa.repositories" />
-      <option name="MAIN_CLASS_NAME" value="com.vermellosa.repositories.BaseRepositoryTest" />
-      <option name="METHOD_NAME" value="testFindAllKeys" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -748,6 +791,32 @@
       <option name="MAIN_CLASS_NAME" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="package" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="ChartEntityTest.testDate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.vermellosa.entities.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="VermelloSA" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.vermellosa.entities" />
+      <option name="MAIN_CLASS_NAME" value="com.vermellosa.entities.ChartEntityTest" />
+      <option name="METHOD_NAME" value="testDate" />
+      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -1231,18 +1300,18 @@
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Google AppEngine Dev Server.AppEngine Dev 1.9.42" />
       <item index="1" class="java.lang.String" itemvalue="JUnit.BaseRepositoryTest.testSaveAndDeleteList" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.BaseRepositoryTest.testFindAllKeys" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.BaseRepositoryTest.testDelete" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.BaseRepositoryTest" />
-      <item index="5" class="java.lang.String" itemvalue="JUnit.All in VermelloSA" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.BaseRepositoryTest.testDelete" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.BaseRepositoryTest" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.All in VermelloSA" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.ChartEntityTest.testDate" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.All in VermelloSA" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.BaseRepositoryTest" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.BaseRepositoryTest.testSaveAndDeleteList" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.BaseRepositoryTest.testDelete" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.BaseRepositoryTest.testFindAllKeys" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.ChartEntityTest.testDate" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.All in VermelloSA" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.BaseRepositoryTest" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.BaseRepositoryTest.testSaveAndDeleteList" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.BaseRepositoryTest.testDelete" />
       </list>
     </recent_temporary>
   </component>
@@ -1262,48 +1331,48 @@
       <workItem from="1478794715173" duration="5578000" />
       <workItem from="1478818775121" duration="22000" />
       <workItem from="1478818817447" duration="595000" />
-      <workItem from="1478819444941" duration="11130000" />
+      <workItem from="1478819444941" duration="13315000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="BaseRepositoryTest - 2016.11.11 at 02h 54m 46s.xml">
-      <configuration name="BaseRepositoryTest" configurationId="JUnit" />
+    <history-entry file="ChartEntityTest_testDate - 2016.11.11 at 03h 12m 18s.xml">
+      <configuration name="ChartEntityTest.testDate" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BaseRepositoryTest - 2016.11.11 at 02h 57m 25s.xml">
-      <configuration name="BaseRepositoryTest" configurationId="JUnit" />
+    <history-entry file="ChartEntityTest_testDate - 2016.11.11 at 03h 12m 45s.xml">
+      <configuration name="ChartEntityTest.testDate" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BaseRepositoryTest - 2016.11.11 at 02h 58m 31s.xml">
-      <configuration name="BaseRepositoryTest" configurationId="JUnit" />
+    <history-entry file="ChartEntityTest_testDate - 2016.11.11 at 03h 13m 04s.xml">
+      <configuration name="ChartEntityTest.testDate" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BaseRepositoryTest - 2016.11.11 at 02h 59m 33s.xml">
-      <configuration name="BaseRepositoryTest" configurationId="JUnit" />
+    <history-entry file="ChartEntityTest_testDate - 2016.11.11 at 03h 13m 15s.xml">
+      <configuration name="ChartEntityTest.testDate" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BaseRepositoryTest - 2016.11.11 at 02h 59m 45s.xml">
-      <configuration name="BaseRepositoryTest" configurationId="JUnit" />
+    <history-entry file="ChartEntityTest_testDate - 2016.11.11 at 03h 15m 46s.xml">
+      <configuration name="ChartEntityTest.testDate" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BaseRepositoryTest - 2016.11.11 at 03h 00m 01s.xml">
-      <configuration name="BaseRepositoryTest" configurationId="JUnit" />
+    <history-entry file="ChartEntityTest_testDate - 2016.11.11 at 03h 16m 04s.xml">
+      <configuration name="ChartEntityTest.testDate" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BaseRepositoryTest_testDelete - 2016.11.11 at 02h 54m 28s.xml">
-      <configuration name="BaseRepositoryTest.testDelete" configurationId="JUnit" />
+    <history-entry file="ChartEntityTest_testDate - 2016.11.11 at 03h 19m 04s.xml">
+      <configuration name="ChartEntityTest.testDate" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BaseRepositoryTest_testFindAllKeys - 2016.11.11 at 02h 54m 24s.xml">
-      <configuration name="BaseRepositoryTest.testFindAllKeys" configurationId="JUnit" />
+    <history-entry file="ChartEntityTest_testDate - 2016.11.11 at 03h 40m 02s.xml">
+      <configuration name="ChartEntityTest.testDate" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BaseRepositoryTest_testSaveAndDeleteList - 2016.11.11 at 02h 54m 19s.xml">
-      <configuration name="BaseRepositoryTest.testSaveAndDeleteList" configurationId="JUnit" />
+    <history-entry file="ChartEntityTest_testDate - 2016.11.11 at 03h 42m 04s.xml">
+      <configuration name="ChartEntityTest.testDate" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BaseRepositoryTest_testSaveAndDeleteList - 2016.11.11 at 02h 57m 47s.xml">
-      <configuration name="BaseRepositoryTest.testSaveAndDeleteList" configurationId="JUnit" />
+    <history-entry file="ChartEntityTest_testDate - 2016.11.11 at 03h 45m 43s.xml">
+      <configuration name="ChartEntityTest.testDate" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17325000" />
+    <option name="totallyTimeSpent" value="19510000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1316,11 +1385,11 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12291667" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27272728" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.055729166" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.055729166" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32875264" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25729167" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25729167" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1388,24 +1457,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/com/vermellosa/repositories/ChartConfigRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/unit_tests/com/vermellosa/repositories/BaseRepositoryTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/unit_tests/com/vermellosa/parameterised_tests/EntityProvider.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -1642,13 +1693,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/com/vermellosa/repositories/ChartRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="11" column="26" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/VermelloSA.iml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1776,63 +1820,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/com/vermellosa/entities/ChartEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="469">
-          <caret line="41" column="9" selection-start-line="41" selection-start-column="9" selection-end-line="41" selection-end-column="9" />
-          <folding>
-            <element signature="method#ChartEntity#0;class#ChartEntity#0" expanded="false" />
-            <element signature="method#ChartEntity#1;class#ChartEntity#0" expanded="false" />
-            <element signature="e#656#657#0" expanded="true" />
-            <element signature="e#712#713#0" expanded="true" />
-            <element signature="e#1987#1988#0" expanded="true" />
-            <element signature="e#2014#2015#0" expanded="true" />
-            <element signature="e#2074#2075#0" expanded="true" />
-            <element signature="e#2106#2107#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/com/vermellosa/repositories/BaseRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1099">
-          <caret line="88" column="7" selection-start-line="88" selection-start-column="7" selection-end-line="88" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#809#810#0" expanded="true" />
-            <element signature="e#863#864#0" expanded="true" />
-            <element signature="e#1002#1003#0" expanded="true" />
-            <element signature="e#1057#1058#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/com/vermellosa/parsers/ChartableOutput.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/unit_tests/com/vermellosa/parameterised_tests/EntityProvider.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="654">
           <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/com/vermellosa/entities/BaseEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="28" column="4" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#306#307#0" expanded="true" />
-            <element signature="e#334#335#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1855,13 +1848,79 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/com/vermellosa/papi/BuildModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/com/vermellosa/entities/BaseEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#306#307#0" expanded="true" />
+            <element signature="e#334#335#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files (x86)/Java/jdk1.7.0_55/src.zip!/java/util/Calendar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2924">
+          <caret line="309" column="22" selection-start-line="309" selection-start-column="22" selection-end-line="309" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/com/vermellosa/parsers/ChartableOutput.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/com/vermellosa/repositories/BaseRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="946">
+          <caret line="88" column="7" selection-start-line="88" selection-start-column="7" selection-end-line="88" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#809#810#0" expanded="true" />
+            <element signature="e#863#864#0" expanded="true" />
+            <element signature="e#1002#1003#0" expanded="true" />
+            <element signature="e#1057#1058#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/com/vermellosa/entities/ChartEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1020">
+          <caret line="77" column="25" selection-start-line="77" selection-start-column="25" selection-end-line="77" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/unit_tests/com/vermellosa/entities/ChartEntityTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1190">
-          <caret line="70" column="51" selection-start-line="70" selection-start-column="51" selection-end-line="70" selection-end-column="51" />
+        <state relative-caret-position="183">
+          <caret line="96" column="48" selection-start-line="96" selection-start-column="48" selection-end-line="96" selection-end-column="48" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/com/vermellosa/repositories/ChartRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="15" column="11" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -7,7 +7,11 @@ import junitparams.Parameters;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
+import java.util.Calendar;
+import java.util.Date;
+
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertNotNull;
 
 /**
@@ -29,7 +33,6 @@ public class ChartEntityTest {
 
         // then
         assertEquals("Happy label has not been incremented " ,value + 1, chartEntity.getDataValue("Happy"));
-        System.out.print(chartEntity.getData());
     }
 
     @Test
@@ -44,7 +47,6 @@ public class ChartEntityTest {
 
         // then
         assertEquals("Happy label has not been incremented " ,value + testVal, chartEntity.getDataValue("Happy"));
-        System.out.print(chartEntity.getData());
     }
 
     @Test(expected = IllegalArgumentException.class)
@@ -96,5 +98,17 @@ public class ChartEntityTest {
 
         // Then
         assertEquals("value not intialised to 0", value, 0);
+    }
+
+    @Test
+    public void testDate(){
+        // given, when
+        chartEntity = new ChartEntity();
+        Calendar cal = Calendar.getInstance();
+        assertNotNull(chartEntity.getDate());
+        cal.setTime(chartEntity.getDate());
+
+        // then
+        assertEquals(Date.class, chartEntity.getDate().getClass());
     }
 }
