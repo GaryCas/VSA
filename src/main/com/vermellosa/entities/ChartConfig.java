@@ -9,22 +9,13 @@ import com.googlecode.objectify.annotation.Index;
  */
 @Entity
 public class ChartConfig  extends BaseEntity{
-    @Index
-    private String name;
 
     public ChartConfig(){
         super();
     }
 
-    public ChartConfig(String id){
+    public ChartConfig(Long id){
         super(id);
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
 }

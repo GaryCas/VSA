@@ -18,9 +18,7 @@ import static com.googlecode.objectify.ObjectifyService.ofy;
  */
 @Entity
 @Cache
-public class ModelVersion implements Comparable<ModelVersion> {
-    @Id
-    private String id;
+public class ModelVersion extends BaseEntity implements Comparable<ModelVersion> {
 
     @Index
     private Integer majorVersion;
@@ -34,7 +32,10 @@ public class ModelVersion implements Comparable<ModelVersion> {
     public ModelVersion(Integer majorVersion, Integer minorVersion) {
         this.majorVersion = majorVersion;
         this.minorVersion = minorVersion;
-        id = majorVersion + "." + minorVersion;
+    }
+
+    public ModelVersion(long l) {
+        super(l);
     }
 
     public static List<ModelVersion> findAll() {
@@ -54,14 +55,6 @@ public class ModelVersion implements Comparable<ModelVersion> {
 
     public Key<ModelVersion> save() {
         return ofy().save().entity(this).now();
-    }
-
-    public String getId() {
-        return this.id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
     }
 
     public Integer getMajorVersion() {

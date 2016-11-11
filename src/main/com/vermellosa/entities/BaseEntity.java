@@ -15,8 +15,8 @@ public class BaseEntity {
 
     }
 
-    public BaseEntity(String id){
-        this.id = Long.parseLong(id);
+    public BaseEntity(Long id){
+        this.id = id;
     }
 
     public Long getId() {

@@ -54,7 +54,7 @@ public class BaseRepositoryTest {
 
     // tests that entities are assigned Ids automatically when they are saved to the datastore.
     @Test
-    @Parameters(source= EntityProvider.class, method="provideEntities")
+    @Parameters(source= EntityProvider.class, method="provideChartConfigEntities")
     public void testSaveEntity(BaseEntity entity){
         // given
 
@@ -68,7 +68,7 @@ public class BaseRepositoryTest {
 
     // tests that entities are saved and deleted again
     @Test
-    @Parameters(source= EntityProvider.class, method="provideEntities")
+    @Parameters(source= EntityProvider.class, method="provideChartConfigEntities")
     public void testSaveAndDeleteEntity(BaseEntity entity){
         // given
 
@@ -90,7 +90,7 @@ public class BaseRepositoryTest {
     @Test
     public void testFindById(){
         // given
-        ChartConfig entity = new ChartConfig("4");
+        ChartConfig entity = new ChartConfig(4L);
 
         // when
         chartConfigRepository.save((ChartConfig) entity);
@@ -132,9 +132,21 @@ public class BaseRepositoryTest {
     }
 
     @Test
+    @Parameters(source=EntityProvider.class, method="provideEntityList")
+    public void testFindAllKeys(ArrayList list){
+        // given
+
+        // when 1
+        chartConfigRepository.save(list);
+
+        // then 1
+        assertEquals("could not locate the 3 specified entities ",chartConfigRepository.findAllKeys().list().size(), 3);
+    }
+
+    @Test
     public void testDelete(){
         // given
-        ChartConfig entity = new ChartConfig("4");
+        ChartConfig entity = new ChartConfig(4L);
 
         // when
         chartConfigRepository.save((ChartConfig) entity);
@@ -146,5 +158,11 @@ public class BaseRepositoryTest {
         // when 2
         chartConfigRepository.delete(4L);
         assertNull(chartConfigRepository.findById(4L));
+    }
+
+    @Test
+    @Parameters(source=EntityProvider.class, method="provideVariedEntities")
+    public void testFilterByType(){
+
     }
 }
