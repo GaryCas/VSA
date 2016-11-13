@@ -41,7 +41,7 @@ public class EntityProvider {
 
         Hashtable<String, Integer> data3 = new Hashtable<>();
 
-        return new BaseEntity[]{
+        return new ChartEntity[]{
                 new ChartEntity(),
                 new ChartEntity(1L),
                 new ChartEntity(data1, new Date()),
