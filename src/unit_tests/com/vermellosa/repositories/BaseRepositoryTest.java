@@ -106,10 +106,10 @@ public class BaseRepositoryTest {
         // given
 
         // when 1
-        chartConfigRepository.save(list);
+        chartRepository.save(list);
 
         // then
-        assertEquals("could not locate the 3 specified entities ",chartConfigRepository.findAll().size(), 3);
+        assertEquals("could not locate the 3 specified entities ",chartRepository.findAll().size(), 3);
     }
 
     @Test
@@ -118,17 +118,17 @@ public class BaseRepositoryTest {
         // given
 
         // when 1
-        chartConfigRepository.save(list);
+        chartRepository.save(list);
 
         // then 1
-        assertEquals("could not locate the 3 specified entities ",chartConfigRepository.findAll().size(), 3);
+        assertEquals("could not locate the 3 specified entities ",chartRepository.findAll().size(), 3);
 
         // when 2
         list.remove(0);
         assertEquals("remove operation did not work ", list.size(), 2);
 
-        chartConfigRepository.delete(list);
-        assertEquals("A single chartConfig is supposed to remain ", chartConfigRepository.findAll().size(), 1);
+        chartRepository.delete(list);
+        assertEquals("A single chartConfig is supposed to remain ", chartRepository.findAll().size(), 1);
     }
 
     @Test
@@ -137,10 +137,10 @@ public class BaseRepositoryTest {
         // given
 
         // when 1
-        chartConfigRepository.save(list);
+        chartRepository.save(list);
 
         // then 1
-        assertEquals("could not locate the 3 specified entities ",chartConfigRepository.findAllKeys().list().size(), 3);
+        assertEquals("could not locate the 3 specified entities ",chartRepository.findAllKeys().list().size(), 3);
     }
 
     @Test
@@ -162,6 +162,6 @@ public class BaseRepositoryTest {
 
     @Test
     public void testFilteredQuery(){
-        
+
     }
 }
