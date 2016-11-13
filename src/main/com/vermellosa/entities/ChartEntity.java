@@ -14,9 +14,9 @@ public class ChartEntity extends BaseEntity{
     // <String, Integer> refers to "Label" to "Integer value of the label occurrences"
     private Hashtable<String, Integer> data;
 
-    // The dateCreated in which the two occurrences
+    // The date in which the two occurrences
     @Index
-    private Date dateCreated;
+    private Date date;
 
     // must make sure that data is assigned in all of the constructors.
 
@@ -24,18 +24,18 @@ public class ChartEntity extends BaseEntity{
     public ChartEntity(){
         super();
         this.data = new Hashtable<>();
-        dateCreated = new Date();
+        date = new Date();
     }
 
     public ChartEntity(Long id){
         super(id);
         data = new Hashtable<String, Integer>();
-        dateCreated = new Date();
+        date = new Date();
     }
 
-    public ChartEntity(Hashtable data, Date dateCreated){
+    public ChartEntity(Hashtable data, Date date){
         this.data = data;
-        this.dateCreated = dateCreated;
+        this.date = date;
     }
 
     public void incLabelValue(String label){
@@ -84,11 +84,11 @@ public class ChartEntity extends BaseEntity{
         this.data = data;
     }
 
-    public Date getDateCreated() {
-        return dateCreated;
+    public Date getDate() {
+        return date;
     }
 
-    public void setDateCreated(Date dateCreated) {
-        this.dateCreated = dateCreated;
+    public void setDate(Date date) {
+        this.date = date;
     }
 }

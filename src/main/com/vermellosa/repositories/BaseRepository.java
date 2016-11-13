@@ -6,12 +6,10 @@ import com.googlecode.objectify.cmd.Query;
 import com.googlecode.objectify.cmd.QueryKeys;
 import com.sun.istack.logging.Logger;
 import com.vermellosa.entities.BaseEntity;
-import com.vermellosa.entities.ChartConfig;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
-import java.util.Map;
-import java.util.logging.Level;
 
 import static com.googlecode.objectify.ObjectifyService.ofy;
 
@@ -79,7 +77,7 @@ public abstract class BaseRepository<T> {
 
         public QueryBuilder withFilter(String filter, Object value){
             if(value != null && targetInitialised){
-                target.filter(filter, value);
+                target = target.filter(filter, value);
             }
             return this;
         }

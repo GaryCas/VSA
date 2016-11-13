@@ -6,9 +6,7 @@ import junitparams.Parameters;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-import java.util.Calendar;
 import java.util.Date;
-import java.util.Hashtable;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
@@ -104,10 +102,10 @@ public class ChartEntityTest {
     public void testDate(){
         // given, when
         chartEntity = new ChartEntity();
-        assertNotNull(chartEntity.getDateCreated());
+        assertNotNull(chartEntity.getDate());
 
         // then
-        assertEquals(Date.class, chartEntity.getDateCreated().getClass());
+        assertEquals(Date.class, chartEntity.getDate().getClass());
     }
 
 }
