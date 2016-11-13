@@ -26,7 +26,6 @@ public class ChartEntity extends BaseEntity{
     }
 
     public ChartEntity(Hashtable data){
-        new ChartEntity();
         this.data = data;
     }
 
