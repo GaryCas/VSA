@@ -8,6 +8,7 @@ import org.junit.runner.RunWith;
 
 import java.util.Calendar;
 import java.util.Date;
+import java.util.Hashtable;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
@@ -103,26 +104,10 @@ public class ChartEntityTest {
     public void testDate(){
         // given, when
         chartEntity = new ChartEntity();
-        Calendar cal = Calendar.getInstance();
         assertNotNull(chartEntity.getDateCreated());
-        cal.setTime(chartEntity.getDateCreated());
 
         // then
         assertEquals(Date.class, chartEntity.getDateCreated().getClass());
-    }
-
-
-    @Test
-    @Parameters(source=EntityProvider.class, method="provideChartEntities")
-    public void testDateFilteredQuery(ChartEntity chartEntity) throws Exception {
-        System.out.println("Chart Id: " + chartEntity.getId());
-        System.out.println("Chart Date: " + chartEntity.getDateCreated());
-
-        // given
-
-        // when
-
-        // then
     }
 
 }

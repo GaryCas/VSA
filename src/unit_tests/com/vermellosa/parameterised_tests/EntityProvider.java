@@ -51,10 +51,10 @@ public class EntityProvider {
     }
 
     public static final Object[] provideEntityList(){
-        ChartConfig entity1 = new ChartConfig(1L);
-        ChartConfig entity2 = new ChartConfig(2L);
-        ChartConfig entity3 = new ChartConfig(3L);
-        ArrayList<ChartConfig> entityList = new ArrayList<>();
+        ChartEntity entity1 = new ChartEntity(1L);
+        ChartEntity entity2 = new ChartEntity(2L);
+        ChartEntity entity3 = new ChartEntity(3L);
+        ArrayList<ChartEntity> entityList = new ArrayList<>();
 
         entityList.add(entity1);
         entityList.add(entity2);
@@ -65,23 +65,7 @@ public class EntityProvider {
         };
     }
 
-    public static final Object[] provideDatedChartEntities(){
-        ChartEntity[] pastChartEntities = new ChartEntity[101];
-        Calendar calendar = Calendar.getInstance();
-
-        for(int i = 0; i < 100; i++){
-            calendar.add(Calendar.DATE, i);
-            pastChartEntities[i] = new ChartEntity(getHashdata() ,calendar.getTime());
-        }
-
-        ArrayList<ChartEntity> pastEntityList = new ArrayList<>(Arrays.asList(pastChartEntities));
-
-        return new Object[]{
-                pastEntityList
-        };
-    }
-
-    private static Hashtable<String, Integer> getHashdata(){
+    public static Hashtable<String, Integer> getHashdata(){
         Hashtable<String, Integer> data1 = new Hashtable<>();
 
         data1.put("Happy", 1);

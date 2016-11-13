@@ -1,6 +1,7 @@
 package com.vermellosa.entities;
 
 import com.googlecode.objectify.annotation.Entity;
+import com.googlecode.objectify.annotation.Index;
 
 import java.util.Date;
 import java.util.Hashtable;
@@ -14,6 +15,7 @@ public class ChartEntity extends BaseEntity{
     private Hashtable<String, Integer> data;
 
     // The dateCreated in which the two occurrences
+    @Index
     private Date dateCreated;
 
     // must make sure that data is assigned in all of the constructors.

@@ -162,6 +162,6 @@ public class BaseRepositoryTest {
 
     @Test
     public void testFilteredQuery(){
-
+        
     }
 }

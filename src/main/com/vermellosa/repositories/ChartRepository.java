@@ -4,7 +4,9 @@ import com.googlecode.objectify.cmd.Query;
 import com.vermellosa.entities.ChartEntity;
 import com.vermellosa.services.CalendarService;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 /**
  * Created by User on 20/08/2016.
@@ -23,7 +25,7 @@ public class ChartRepository extends BaseRepository<ChartEntity>{
      *
      * Find a set of chart entities that where created before a specified time
      */
-    public Query getDataWithRange(int days){
+    public Query getQueryWithRange(int days){
             CalendarService.addDays(days);
             CalendarService.minusDays(days);
 
@@ -34,5 +36,8 @@ public class ChartRepository extends BaseRepository<ChartEntity>{
             return q;
     }
 
+    public List<ChartEntity> getListWithDateRange(int days){
+        return getQueryWithRange(7).list();
+    }
 
 }

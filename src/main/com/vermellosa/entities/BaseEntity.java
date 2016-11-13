@@ -22,4 +22,8 @@ public class BaseEntity {
         return id;
     }
 
+    public void setId(Long id) {
+        this.id = id;
+    }
+
 }
