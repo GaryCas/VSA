@@ -8,6 +8,7 @@ import junitparams.JUnitParamsRunner;
 import org.junit.runner.RunWith;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.Hashtable;
 
 /**
@@ -45,12 +46,11 @@ public class EntityProvider {
         return new BaseEntity[]{
                 new ChartEntity(),
                 new ChartEntity(1L),
-                new ChartEntity(data1),
-                new ChartEntity(data2),
-                new ChartEntity(data3)
+                new ChartEntity(data1, new Date()),
+                new ChartEntity(data2, new Date()),
+                new ChartEntity(data3, new Date())
         };
     }
-
 
     public static final Object[] provideEntityList(){
         ChartConfig entity1 = new ChartConfig(1L);
@@ -62,11 +62,11 @@ public class EntityProvider {
         entityList.add(entity2);
         entityList.add(entity3);
 
-
-
         return new Object[]{
                 entityList
         };
     }
+
+
 
 }

@@ -1,6 +1,5 @@
 package com.vermellosa.entities;
 
-import com.google.inject.Inject;
 import com.vermellosa.parameterised_tests.EntityProvider;
 import junitparams.JUnitParamsRunner;
 import junitparams.Parameters;
@@ -105,10 +104,10 @@ public class ChartEntityTest {
         // given, when
         chartEntity = new ChartEntity();
         Calendar cal = Calendar.getInstance();
-        assertNotNull(chartEntity.getDate());
-        cal.setTime(chartEntity.getDate());
+        assertNotNull(chartEntity.getDateCreated());
+        cal.setTime(chartEntity.getDateCreated());
 
         // then
-        assertEquals(Date.class, chartEntity.getDate().getClass());
+        assertEquals(Date.class, chartEntity.getDateCreated().getClass());
     }
 }

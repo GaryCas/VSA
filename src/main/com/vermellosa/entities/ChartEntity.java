@@ -1,8 +1,6 @@
 package com.vermellosa.entities;
 
-import com.google.inject.Inject;
 import com.googlecode.objectify.annotation.Entity;
-import com.googlecode.objectify.annotation.Id;
 
 import java.util.Date;
 import java.util.Hashtable;
@@ -12,21 +10,26 @@ import java.util.Hashtable;
  */
 @Entity
 public class ChartEntity extends BaseEntity{
+    // <String, Integer> refers to "Label" to "Integer value of the label occurrences"
     private Hashtable<String, Integer> data;
-    private Date date;
+
+    // The dateCreated in which the two occurrences
+    private Date dateCreated;
 
     public ChartEntity(){
         super();
         this.data = new Hashtable<>();
-        date = new Date();
+        dateCreated = new Date();
     }
 
     public ChartEntity(Long id){
         super(id);
+        dateCreated = new Date();
     }
 
-    public ChartEntity(Hashtable data){
+    public ChartEntity(Hashtable data, Date dateCreated){
         this.data = data;
+        this.dateCreated = dateCreated;
     }
 
     public void incLabelValue(String label){
@@ -73,11 +76,11 @@ public class ChartEntity extends BaseEntity{
         this.data = data;
     }
 
-    public Date getDate() {
-        return date;
+    public Date getDateCreated() {
+        return dateCreated;
     }
 
-    public void setDate(Date date) {
-        this.date = date;
+    public void setDateCreated(Date dateCreated) {
+        this.dateCreated = dateCreated;
     }
 }
