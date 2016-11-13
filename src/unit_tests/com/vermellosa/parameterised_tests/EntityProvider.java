@@ -7,9 +7,7 @@ import com.vermellosa.entities.ModelVersion;
 import junitparams.JUnitParamsRunner;
 import org.junit.runner.RunWith;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.Hashtable;
+import java.util.*;
 
 /**
  * Created by rd019985 on 10/11/2016.
@@ -67,6 +65,30 @@ public class EntityProvider {
         };
     }
 
+    public static final Object[] provideDatedChartEntities(){
+        ChartEntity[] pastChartEntities = new ChartEntity[101];
+        Calendar calendar = Calendar.getInstance();
 
+        for(int i = 0; i < 100; i++){
+            calendar.add(Calendar.DATE, i);
+            pastChartEntities[i] = new ChartEntity(getHashdata() ,calendar.getTime());
+        }
+
+        ArrayList<ChartEntity> pastEntityList = new ArrayList<>(Arrays.asList(pastChartEntities));
+
+        return new Object[]{
+                pastEntityList
+        };
+    }
+
+    private static Hashtable<String, Integer> getHashdata(){
+        Hashtable<String, Integer> data1 = new Hashtable<>();
+
+        data1.put("Happy", 1);
+        data1.put("Sad", 2);
+        data1.put("Neutral", 3);
+
+        return data1;
+    }
 
 }

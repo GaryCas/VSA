@@ -16,6 +16,9 @@ public class ChartEntity extends BaseEntity{
     // The dateCreated in which the two occurrences
     private Date dateCreated;
 
+    // must make sure that data is assigned in all of the constructors.
+
+
     public ChartEntity(){
         super();
         this.data = new Hashtable<>();
@@ -24,6 +27,7 @@ public class ChartEntity extends BaseEntity{
 
     public ChartEntity(Long id){
         super(id);
+        data = new Hashtable<String, Integer>();
         dateCreated = new Date();
     }
 
@@ -58,6 +62,8 @@ public class ChartEntity extends BaseEntity{
     // accessing the intValue() method will return a null pointer exception.
     // Accessing data through this method will ensure safety principals and eliminate a possible null pointer exception
     int getDataValue(String label){
+
+
         Integer value = getData().get(label);
         if(value == null){
             Hashtable<String, Integer> temp = getData();

@@ -77,7 +77,7 @@
 
         <dependency>
             <groupId>com.google.apis</groupId>
-            <artifactId>google-api-services-oauth2</artifactId>
+            <artifactId>google-api-com.vermellosa.services-oauth2</artifactId>
             <version>v2-rev106-1.21.0</version>
         </dependency>
 

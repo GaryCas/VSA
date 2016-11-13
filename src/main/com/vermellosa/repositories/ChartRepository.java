@@ -2,8 +2,8 @@ package com.vermellosa.repositories;
 
 import com.googlecode.objectify.cmd.Query;
 import com.vermellosa.entities.ChartEntity;
+import com.vermellosa.services.CalendarService;
 
-import java.util.ArrayList;
 import java.util.Date;
 
 /**
@@ -16,10 +16,23 @@ public class ChartRepository extends BaseRepository<ChartEntity>{
         return ChartEntity.class;
     }
 
-    public ArrayList<ChartEntity> getDataFromAfter(Date date){
-            queryBuilder.withFilter("date >=", date);
+    /**
+     *
+     * @param days
+     * @return An array list of different Chart Entities
+     *
+     * Find a set of chart entities that where created before a specified time
+     */
+    public Query getDataWithRange(int days){
+            CalendarService.addDays(days);
+            CalendarService.minusDays(days);
+
+            // new Date() indicates that the instance is always "right now" as the application currently does not
+            // support queries bounded by two seperate dates. i.e we can not return the results between 3 and 2 weeks ago
+            queryBuilder.withFilter("date >=", new Date());
             Query q = queryBuilder.build();
-            return (ArrayList<ChartEntity>) q.list();
+            return q;
     }
+
 
 }

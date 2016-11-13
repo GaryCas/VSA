@@ -110,4 +110,19 @@ public class ChartEntityTest {
         // then
         assertEquals(Date.class, chartEntity.getDateCreated().getClass());
     }
+
+
+    @Test
+    @Parameters(source=EntityProvider.class, method="provideChartEntities")
+    public void testDateFilteredQuery(ChartEntity chartEntity) throws Exception {
+        System.out.println("Chart Id: " + chartEntity.getId());
+        System.out.println("Chart Date: " + chartEntity.getDateCreated());
+
+        // given
+
+        // when
+
+        // then
+    }
+
 }
