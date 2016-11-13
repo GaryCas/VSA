@@ -22,8 +22,7 @@ public class ChartEntity extends BaseEntity{
     }
 
     public ChartEntity(Long id){
-        new ChartEntity();
-        setId(id);
+        super(id);
     }
 
     public ChartEntity(Hashtable data){

@@ -1,0 +1,11 @@
+com.vermellosa
+com.vermellosa.api
+com.vermellosa.connectors
+com.vermellosa.di
+com.vermellosa.entities
+com.vermellosa.listeners
+com.vermellosa.oauth
+com.vermellosa.papi
+com.vermellosa.parsers
+com.vermellosa.repositories
+com.vermellosa.utils
