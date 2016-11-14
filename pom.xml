@@ -75,10 +75,18 @@
             <scope>test</scope>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/com.google.api.client/google-api-client-googleapis -->
         <dependency>
-            <groupId>com.google.apis</groupId>
-            <artifactId>google-api-com.vermellosa.services-oauth2</artifactId>
-            <version>v2-rev106-1.21.0</version>
+            <groupId>com.google.api.client</groupId>
+            <artifactId>google-api-client-googleapis</artifactId>
+            <version>1.4.1-beta</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.google.api.client/google-api-client-googleapis-auth-oauth -->
+        <dependency>
+            <groupId>com.google.api.client</groupId>
+            <artifactId>google-api-client-googleapis-auth-oauth</artifactId>
+            <version>1.2.3-alpha</version>
         </dependency>
 
 
@@ -201,6 +209,13 @@
             <version>${appengine.target.version}</version>
             <scope>test</scope>
         </dependency>
+
+        <dependency>
+            <groupId>com.google.apis</groupId>
+            <artifactId>google-api-services-oauth2</artifactId>
+            <version>v1-rev127-1.22.0</version>
+        </dependency>
+
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
