@@ -1,13 +1,6 @@
 target/
-.idea/*
 .idea/**/*
-.sonar
-src/main/webapp/*.html
 *.iml
-VSA/VermelloSA.iml
-VermelloSA.iml
-vermelloSA.iml
-VSA.iml
 
 # Front-end ignores
 bower_components/
@@ -17,4 +10,3 @@ public/libs
 public/dist
 *.orig
 
-/.idea/workspace.xml
