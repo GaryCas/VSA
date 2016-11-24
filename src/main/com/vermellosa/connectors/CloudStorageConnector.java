@@ -1,12 +1,5 @@
 package com.vermellosa.connectors;
 
-import com.google.appengine.api.blobstore.BlobKey;
-import com.google.appengine.api.blobstore.BlobstoreService;
-import com.google.appengine.api.blobstore.BlobstoreServiceFactory;
-import com.google.appengine.repackaged.com.google.api.client.googleapis.auth.oauth2.GoogleCredential;
-import com.google.appengine.repackaged.com.google.api.client.googleapis.javanet.GoogleNetHttpTransport;
-import com.google.appengine.repackaged.com.google.api.client.http.*;
-import com.google.appengine.tools.cloudstorage.GcsFilename;
 import com.google.appengine.tools.cloudstorage.GcsFileOptions;
 import com.google.appengine.tools.cloudstorage.GcsFilename;
 import com.google.appengine.tools.cloudstorage.GcsInputChannel;
@@ -14,6 +7,14 @@ import com.google.appengine.tools.cloudstorage.GcsOutputChannel;
 import com.google.appengine.tools.cloudstorage.GcsService;
 import com.google.appengine.tools.cloudstorage.GcsServiceFactory;
 import com.google.appengine.tools.cloudstorage.RetryParams;
+import com.google.appengine.api.blobstore.BlobKey;
+import com.google.appengine.api.blobstore.BlobstoreService;
+import com.google.appengine.api.blobstore.BlobstoreServiceFactory;
+import com.google.appengine.repackaged.com.google.api.client.googleapis.auth.oauth2.GoogleCredential;
+import com.google.appengine.repackaged.com.google.api.client.googleapis.javanet.GoogleNetHttpTransport;
+import com.google.appengine.repackaged.com.google.api.client.http.*;
+import com.vermellosa.parsers.ResultOutput;
+
 
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -24,7 +25,10 @@ import java.io.OutputStream;
 import java.net.URLEncoder;
 import java.nio.channels.Channels;
 import java.security.GeneralSecurityException;
+import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
+import java.util.Scanner;
 
 /**
  * Created by User on 20/08/2016.
@@ -46,8 +50,8 @@ public class CloudStorageConnector extends HttpServlet {
     public CloudStorageConnector() throws IOException {
     }
 
-    public void getFile(String bucketName) throws IOException, GeneralSecurityException {
-        String uri = "https://storage.googleapis.com/" + URLEncoder.encode(bucketName, "UTF-8");
+    public void getFile(String bucketName, String filename) throws IOException, GeneralSecurityException {
+        String uri = "https://storage.googleapis.com/" + URLEncoder.encode(bucketName, "UTF-8") + "/" + URLEncoder.encode("language_id.txt", "UTF-8");
 
         HttpTransport httpTransport = GoogleNetHttpTransport.newTrustedTransport();
         HttpRequestFactory requestFactory = httpTransport.createRequestFactory(getCreds(STORAGE_SCOPE));
@@ -57,7 +61,23 @@ public class CloudStorageConnector extends HttpServlet {
         HttpResponse response = request.execute();
         String content = response.parseAsString();
 
-        System.out.println(content);
+        // make a class that constructs results
+
+        ResultOutput.createOutputFile(content, "output.txt");
+
+    }
+
+    private void incrementOrAdd(String label) {
+        System.out.println("Adding label " + label);
+    }
+
+    @Override
+    public void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+        GcsFileOptions instance = GcsFileOptions.getDefaultInstance();
+        GcsFilename fileName = getFileName(req);
+        GcsOutputChannel outputChannel;
+        outputChannel = gcsService.createOrReplace(fileName, instance);
+        copy(req.getInputStream(), Channels.newOutputStream(outputChannel));
     }
 
     @Override
@@ -69,7 +89,7 @@ public class CloudStorageConnector extends HttpServlet {
                     "/gs/" + fileName.getBucketName() + "/" + fileName.getObjectName());
             blobstoreService.serve(blobKey, response);
         } else {
-            GcsInputChannel readChannel = gcsService.openPrefetchingReadChannel(fileName, 0, BUFFER_SIZE);
+            GcsInputChannel readChannel = gcsService.openPrefetchingReadChannel(fileName, 0L, BUFFER_SIZE);
             copy(Channels.newInputStream(readChannel), response.getOutputStream());
         }
     }
@@ -79,7 +99,7 @@ public class CloudStorageConnector extends HttpServlet {
                 .createScoped(Collections.singleton(scopes));
     }
 
-    private GcsFilename getFileName(HttpServletRequest req) {
+    protected GcsFilename getFileName(HttpServletRequest req) {
         String[] splits = req.getRequestURI().split("/", 4);
         if (!splits[0].equals("") || !splits[1].equals("gcs")) {
             throw new IllegalArgumentException("The URL is not formed as expected. " +
