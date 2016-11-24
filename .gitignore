@@ -2,6 +2,8 @@ target/
 .idea/**/*
 .idea/*
 *.iml
+VermelloSA.iml
+.idea/workspace.xml
 
 # Front-end ignores
 bower_components/
