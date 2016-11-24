@@ -70,17 +70,4 @@ public class ResultOutputTest {
         ResultOutput.results.add("Meh :- 1");
     }
 
-    @Test
-    public void testPublishResults() throws IOException, GeneralSecurityException {
-        // given
-        setResults();
-
-        // when
-        ResultOutput.publishResults("unitTests.txt");
-
-        // then
-        String file = GetConnectors.getCloudStorageConnector().getFile("quickstart-1470656086", "unitTests.txt");
-        assertNotNull(file);
-        assertNotEquals(file, "");
-    }
 }

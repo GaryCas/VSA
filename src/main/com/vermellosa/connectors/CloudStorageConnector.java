@@ -22,6 +22,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.io.UnsupportedEncodingException;
+import java.net.URI;
 import java.net.URLEncoder;
 import java.nio.channels.Channels;
 import java.security.GeneralSecurityException;
@@ -34,6 +36,8 @@ public class CloudStorageConnector extends HttpServlet {
 
     public static final boolean SERVE_USING_BLOBSTORE_API = false;
     private static final int BUFFER_SIZE = 2 * 1024 * 1024;
+    private static CloudStorageConnector cloudStorageConnector = null;
+
 
     private static final String STORAGE_SCOPE =
             "https://www.googleapis.com/auth/devstorage.read_write";
@@ -44,11 +48,18 @@ public class CloudStorageConnector extends HttpServlet {
             .totalRetryPeriodMillis(15000)
             .build());
 
-    public CloudStorageConnector() throws IOException {
+    private CloudStorageConnector() throws IOException {
+    }
+
+    public static CloudStorageConnector getCloudStorageConnector() throws IOException {
+        if(cloudStorageConnector == null){
+            cloudStorageConnector = new CloudStorageConnector();
+        }
+        return cloudStorageConnector;
     }
 
     public String getFile(String bucketName, String filename) throws IOException, GeneralSecurityException {
-        String uri = "https://storage.googleapis.com/" + URLEncoder.encode(bucketName, "UTF-8") + "/" + URLEncoder.encode(filename, "UTF-8");
+        String uri = "https://storage.googleapis.com/" + URLEncoder.encode(bucketName + "/" + filename, "UTF-8");
 
         HttpTransport httpTransport = GoogleNetHttpTransport.newTrustedTransport();
         HttpRequestFactory requestFactory = httpTransport.createRequestFactory(getCreds(STORAGE_SCOPE));
@@ -60,7 +71,7 @@ public class CloudStorageConnector extends HttpServlet {
 
         // make a class that constructs results
 
-        ResultOutput.createOutputFile(content, "output.txt");
+        ResultOutput.createOutputFile(content, "quickstart-1470656086","output.txt");
 
         return content;
 
@@ -68,6 +79,25 @@ public class CloudStorageConnector extends HttpServlet {
 
     private void incrementOrAdd(String label) {
         System.out.println("Adding label " + label);
+    }
+
+    /**
+     *
+     * @param bucketName
+     * @param outputFile
+     * @throws IOException
+     * @throws GeneralSecurityException
+     *
+     * Not sure how to get this working
+     */
+    public void postIt(String bucketName, String outputFile) throws IOException, GeneralSecurityException {
+        String uri = URLEncoder.encode("/gcs/" + bucketName + "/" + outputFile, "UTF-8");
+
+        HttpTransport httpTransport = GoogleNetHttpTransport.newTrustedTransport();
+        HttpRequestFactory requestFactory = httpTransport.createRequestFactory(getCreds(STORAGE_SCOPE));
+        GenericUrl url = new GenericUrl(uri);
+
+        //doPost(request, response);
     }
 
     @Override
@@ -98,7 +128,18 @@ public class CloudStorageConnector extends HttpServlet {
                 .createScoped(Collections.singleton(scopes));
     }
 
+    protected GcsFilename getFileName(HttpRequest req) {
+
+        String[] splits = req.getUrl().toString().split("/", 4);
+        if (!splits[0].equals("") || !splits[1].equals("gcs")) {
+            throw new IllegalArgumentException("The URL is not formed as expected. " +
+                    "Expecting /gcs/<bucket>/<object>");
+        }
+        return new GcsFilename(splits[2], splits[3]);
+    }
+
     protected GcsFilename getFileName(HttpServletRequest req) {
+
         String[] splits = req.getRequestURI().split("/", 4);
         if (!splits[0].equals("") || !splits[1].equals("gcs")) {
             throw new IllegalArgumentException("The URL is not formed as expected. " +
@@ -123,5 +164,6 @@ public class CloudStorageConnector extends HttpServlet {
             output.close();
         }
     }
+
 
 }

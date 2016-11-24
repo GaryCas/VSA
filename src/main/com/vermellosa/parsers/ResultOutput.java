@@ -1,5 +1,6 @@
 package com.vermellosa.parsers;
 
+import com.vermellosa.connectors.CloudStorageConnector;
 import org.apache.commons.io.FileUtils;
 
 import java.io.File;
@@ -17,10 +18,15 @@ public class ResultOutput {
     public static ArrayList<String> results = new ArrayList<>();
     public static StringBuilder sb = new StringBuilder();
 
-    public static void createOutputFile(String content, String outputFile){
+
+    public static void createOutputFile(String content, String bucketName, String outputFile){
         createString(content);
 
-        publishResults(outputFile);
+        try {
+            CloudStorageConnector.getCloudStorageConnector().postIt(bucketName, outputFile);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     /**
@@ -61,12 +67,5 @@ public class ResultOutput {
         return -1;
     }
 
-    protected static void publishResults(String outputFile)  {
-        // write to output file on CS
-        try {
-            FileUtils.writeStringToFile(new File("/gcs/quickstart-1470656086/" + outputFile), results.toString());
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
+
 }
