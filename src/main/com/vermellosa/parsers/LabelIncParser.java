@@ -7,13 +7,14 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.security.GeneralSecurityException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
  * Created by rd019985 on 24/11/2016.
  */
-public class ResultOutput {
+public class LabelIncParser {
 
     public static ArrayList<String> results = new ArrayList<>();
     public static StringBuilder sb = new StringBuilder();
@@ -25,6 +26,8 @@ public class ResultOutput {
         try {
             CloudStorageConnector.getCloudStorageConnector().postIt(bucketName, outputFile);
         } catch (IOException e) {
+            e.printStackTrace();
+        } catch (GeneralSecurityException e) {
             e.printStackTrace();
         }
     }

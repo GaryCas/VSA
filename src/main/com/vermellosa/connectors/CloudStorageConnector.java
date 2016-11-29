@@ -13,7 +13,7 @@ import com.google.appengine.api.blobstore.BlobstoreServiceFactory;
 import com.google.appengine.repackaged.com.google.api.client.googleapis.auth.oauth2.GoogleCredential;
 import com.google.appengine.repackaged.com.google.api.client.googleapis.javanet.GoogleNetHttpTransport;
 import com.google.appengine.repackaged.com.google.api.client.http.*;
-import com.vermellosa.parsers.ResultOutput;
+import com.vermellosa.parsers.LabelIncParser;
 
 
 import javax.servlet.http.HttpServlet;
@@ -22,8 +22,6 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
-import java.io.UnsupportedEncodingException;
-import java.net.URI;
 import java.net.URLEncoder;
 import java.nio.channels.Channels;
 import java.security.GeneralSecurityException;
@@ -48,7 +46,7 @@ public class CloudStorageConnector extends HttpServlet {
             .totalRetryPeriodMillis(15000)
             .build());
 
-    private CloudStorageConnector() throws IOException {
+    public CloudStorageConnector() throws IOException {
     }
 
     public static CloudStorageConnector getCloudStorageConnector() throws IOException {
@@ -71,7 +69,7 @@ public class CloudStorageConnector extends HttpServlet {
 
         // make a class that constructs results
 
-        ResultOutput.createOutputFile(content, "quickstart-1470656086","output.txt");
+        LabelIncParser.createOutputFile(content, "quickstart-1470656086","output.txt");
 
         return content;
 

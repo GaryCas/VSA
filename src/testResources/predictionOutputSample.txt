@@ -1,0 +1,20 @@
+{
+ "kind": "prediction#output",
+ "id": "language-identifier",
+ "selfLink": "https://www.googleapis.com/prediction/v1.6/projects/prediction-docs/trainedmodels/language-identifier/predict",
+ "outputLabel": "French",
+ "outputMulti": [
+  {
+   "label": "English",
+   "score": "0.000000"
+  },
+  {
+   "label": "French",
+   "score": "1.000000"
+  },
+  {
+   "label": "Spanish",
+   "score": "0.000000"
+  }
+ ]
+}
