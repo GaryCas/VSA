@@ -20,7 +20,6 @@ public class PredictOAuthUtils extends OAuthUtils {
     protected Set<String> createScopes() {
         Set<String> localScopes = new HashSet<>();
 
-
         return Collections.unmodifiableSet(localScopes);
     }
 

@@ -39,7 +39,7 @@ public abstract class OAuthUtils {
 
     protected String getClientSecret() {
         return "";
-//        return Config.getProperty(Constants.CLIENT_SECRET_KEY);
+//         return Config.getProperty(Constants.CLIENT_SECRET_KEY);
     }
 
     public String getRedirectUri(HttpServletRequest req) {
